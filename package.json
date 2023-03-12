@@ -1,0 +1,21 @@
+{
+  "name": "virtual-merge",
+  "version": "1.0.0",
+  "description": "A utility library to merge multiple Objects virtually",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && esbuild src/index.ts --outfile=dist/index.mjs",
+    "test": "tsx src/test.ts",
+    "prepublish": "pnpm build"
+  },
+  "keywords": [ "merge" ],
+  "author": "Vendicated <vendicated+npm@riseup.net>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.0"
+  },
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  }
+}
