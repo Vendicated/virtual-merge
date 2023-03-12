@@ -18,6 +18,10 @@ assert.equal(Object.keys(merged).length, 3);
 
 assert(Object.prototype.hasOwnProperty.call(merged, "foo"));
 assert(!Object.prototype.hasOwnProperty.call(merged, "foreign"));
+assert("baz" in merged);
+assert(!("aaaa" in merged));
+assert(Object.hasOwn(merged, "foo"));
+assert(!Object.hasOwn(merged, "foreign"));
 
 obj1.foo = "foobar";
 assert.equal(obj1.foo, merged.foo);
@@ -33,3 +37,4 @@ assert.equal(Object.keys(merged).length, 4);
 assert.deepEqual(Object.getOwnPropertyDescriptor(merged, "baz"), Object.getOwnPropertyDescriptor(merged, "baz"));
 
 [obj1, obj2, obj3].forEach(obj => assert.equal(Object.keys(obj).length, 1));
+
