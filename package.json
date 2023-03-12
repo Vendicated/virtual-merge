@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc && esbuild src/index.ts --outfile=dist/index.mjs",
     "test": "tsx src/test.ts",
-    "prepublish": "pnpm build"
+    "prepublishOnly": "pnpm build"
   },
   "keywords": [ "merge" ],
   "author": "Vendicated <vendicated+npm@riseup.net>",
